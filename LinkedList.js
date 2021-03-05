@@ -96,6 +96,7 @@ class LinkedList {
         return currentNode;
     }
 
+    // Insert at the beggining of Linked List: O(1)
     insert(value) {
         if (this.isEmpty()) {
             const newNode = new Node(value);
