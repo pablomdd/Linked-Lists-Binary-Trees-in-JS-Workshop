@@ -95,6 +95,21 @@ class LinkedList {
 
         return currentNode;
     }
+
+    insert(value) {
+        if (this.isEmpty()) {
+            const newNode = new Node(value);
+            this.tail = newNode;
+            this.head = this.tail;
+            this.length++;
+        } else {
+            const newNode = new Node(value);
+            newNode.next = this.head;
+            this.head = newNode;
+
+            this.length++;
+        }
+    }
 }
 
 export default LinkedList;
